@@ -2,29 +2,26 @@
 
 ### Reference Documentation
 
-We are using two type as city and coordinates  as equalignorecase manner .
+this project is configured with maven and using JDK 1.8.
 
-if we use type as city then city and country will  be mandatory rest all field will be ignored 
-if we use type as city then lon and lat will be mandatory rest all field will be ignored 
+To Build Project:
 
-for basic validation of country code to be use ISO 3166 country codes we are using Neo Visionaries Internationalization Package under apache license 
- 
-it will call accordingly call below thirdpary APIs
+Execute the following command inside project root folder:
 
-api.openweathermap.org/data/2.5/weather?q={city name,countrycode}&appkey=ffa6f13ea40a22452bba3be726315d3f
-api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appkey=ffa6f13ea40a22452bba3be726315d3f
+	mvn clean install
+To Run Project:
+use below command inside project root folder 
 
+	mvn spring-boot:run
+default port to execute is 8080 
 
+List of API's
 
-
-
-
-
-curl --location --request GET 'http://localhost:8080/weather?city=asf&country=IN&type=CITY' \
+Call Post API with valid request body  
+POST /transactions - saves the given transaction if valid for stats summary 
 
 
-curl --location --request GET 'http://localhost:8080/weather?lat=12&lon=12&type=COORDINATES' \
-
-
+GET /statistics - gets the aggregated summary statistics
+GET /transactions - to delete the transactions . 
 
 
